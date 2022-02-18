@@ -30,4 +30,10 @@ $router->post('/{name}/{age}[/{class}]',function($name ,$age, $class=null ){
 });
 */
 
-$router->get('/{name}', 'MyController@MyName');
+$router->get('get/{name}', 'MyController@InfoGet');
+
+$router->post('create/{name}', 'MyController@Create');
+
+$router->put('update/{name}', 'MyController@UpdateInfo');
+
+$router->delete('delete/{name}', 'MyController@DeleteInfo');
