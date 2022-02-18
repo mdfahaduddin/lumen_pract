@@ -24,7 +24,10 @@ $router->post('/mdfahad', function(){
     return 'I am Mohammad Fahad';
 });
 */
-/**optional perametars */
+/**optional perametars 
 $router->post('/{name}/{age}[/{class}]',function($name ,$age, $class=null ){
     return $name. $age. $class;
 });
+*/
+
+$router->get('/{name}', 'MyController@MyName');
