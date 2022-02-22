@@ -13,12 +13,16 @@ class MyController extends Controller {
         return 'Your Name is '. $name;
     }
 
-    public function UpdateInfo($name){
-        return 'Your Name is '. $name .' Update Successful !';
+    public function UpdateInfo($name,$age,$city,$class){
+        return response('Your Name is '. $name . $age . $city . $class . ' Update Successful !')
+        ->header('Your name',$name)
+        ->header('Your age',$age)
+        ->header('Your city',$city)
+        ->header('Your class',$class) ;
     }
 
     public function DeleteInfo($name){
-        return 'Your Name is '. $name .' Delete Successful !';
+        return response('Your Name is '. $name .' Delete Successful !') ;//response body
     }
 
 }
