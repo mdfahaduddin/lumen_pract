@@ -47,3 +47,5 @@ $router->get('/redirect1','MyController@FirstMethForRedirect');
 $router->get('/redirect2','MyController@SecondMethForRedirect');
 
 $router->get('/download','MyController@Download');
+
+$router->post('/catch','MyController@Catch');

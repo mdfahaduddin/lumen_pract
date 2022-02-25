@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class MyController extends Controller {
 
@@ -53,6 +54,10 @@ class MyController extends Controller {
     public function Download(){
         $FilePath = 'downloadTest.txt';
         return response()->download($FilePath);
+    }
+
+    public function Catch(Request $request){
+      return  $request->header();
     }
 
 }
