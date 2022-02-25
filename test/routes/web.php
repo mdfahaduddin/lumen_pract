@@ -37,3 +37,13 @@ $router->post('create/{name}', 'MyController@Create');
 $router->put('update/{name}/{age}/{city}/{class}', 'MyController@UpdateInfo');
 
 $router->delete('delete/{name}', 'MyController@DeleteInfo');
+
+$router->get('/array','MyController@ArrayTest');
+
+$router->get('/array2','MyController@ArrayTest2');
+
+$router->get('/redirect1','MyController@FirstMethForRedirect');
+
+$router->get('/redirect2','MyController@SecondMethForRedirect');
+
+$router->get('/download','MyController@Download');
