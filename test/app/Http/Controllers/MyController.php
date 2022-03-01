@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
+use illuminate\support\Facades\DB;
 
 class MyController extends Controller {
 
@@ -59,5 +60,7 @@ class MyController extends Controller {
     public function Catch(Request $request){
       return  $request->header();
     }
+
+
 
 }

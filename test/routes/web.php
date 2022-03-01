@@ -49,3 +49,15 @@ $router->get('/redirect2','MyController@SecondMethForRedirect');
 $router->get('/download','MyController@Download');
 
 $router->post('/catch','MyController@Catch');
+
+$router->get('/db','ExampleController@testConnection');
+$router->get('/selectdata','ExampleController@selectData');
+
+//CURD ope
+$router->get('/details','DetailsController@DetailsSelect');
+
+$router->delete('/details','DetailsController@DetailsDelete');
+
+$router->put('/details','DetailsController@DetailsUpdate');
+
+$router->post('/details','DetailsController@DetailsCreate');
