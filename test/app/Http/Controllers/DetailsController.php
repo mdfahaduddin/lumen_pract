@@ -32,8 +32,23 @@ class DetailsController extends Controller{
 
     }
 
-    function DetailsUpdate(){
+    function DetailsUpdate(Request $request){
         
+      $inputName =  $request->input("name");
+      $inputRoll =  $request->input("roll");
+      $inputClass =  $request->input("class");
+      $inputCity =  $request->input("city");
+      $inputPhoneNo =  $request->input("phone_no");
+
+      $SQL = "UPDATE `details` SET `name`=?,`class`=?,`city`=?,`phone_no`=? WHERE `roll`=?";
+     $result = DB::update($SQL,[$inputName,$inputClass,$inputCity,$inputPhoneNo,$inputRoll]);
+
+     if($result == true){
+        return 'Update Seccessful';
+    }else{
+        return 'Error ! please try again';
+    }
+
     }
 
     function DetailsCreate(Request $request){
