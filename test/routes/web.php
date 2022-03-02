@@ -2,7 +2,9 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
-
+$router->get('/', function () use ($router) {
+    return 'Home';
+});
 /*
 $router->get('/get', function () use ($router) {
     return 'From get met';
@@ -89,3 +91,18 @@ $router->post('/builderinsert','QueryBuilderController@Insert');
 $router->put('/builderupdate','QueryBuilderController@Update');
 
 $router->delete('/builderdelete','QueryBuilderController@Delete');
+
+//Model router
+$router->get('/mget','DetailsModelController@SelectAll');
+$router->post('/mgetbyid','DetailsModelController@SelectID');
+$router->get('/mgetcount','DetailsModelController@Count');
+$router->get('/mgetmax','DetailsModelController@Max');
+$router->get('/mgetmin','DetailsModelController@Min');
+$router->get('/mgetavg','DetailsModelController@Avg');
+$router->get('/mgetsum','DetailsModelController@Sum');
+
+$router->post('/minsert','DetailsModelController@Insert');
+
+$router->delete('/mdelete','DetailsModelController@Delete');
+
+$router->patch('/mupdate','DetailsModelController@Update');
