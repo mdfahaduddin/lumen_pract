@@ -71,3 +71,21 @@ $router->get('/builder2','QueryBuilderController@SingleRow');
 $router->get('/builder3','QueryBuilderController@SingleRowFind');
 
 $router->get('/builder4','QueryBuilderController@PluckMethod');
+
+$router->get('/builder5','QueryBuilderController@RowCount');
+
+$router->get('/builder6','QueryBuilderController@Max');
+
+$router->get('/builder7','QueryBuilderController@Min');
+
+$router->get('/builder8','QueryBuilderController@Avg');
+
+$router->get('/builder9','QueryBuilderController@Sum');
+
+//CURD query
+
+$router->post('/builderinsert','QueryBuilderController@Insert');
+
+$router->put('/builderupdate','QueryBuilderController@Update');
+
+$router->delete('/builderdelete','QueryBuilderController@Delete');
