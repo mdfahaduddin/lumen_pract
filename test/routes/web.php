@@ -61,3 +61,13 @@ $router->delete('/details','DetailsController@DetailsDelete');
 $router->put('/details','DetailsController@DetailsUpdate');
 
 $router->post('/details','DetailsController@DetailsCreate');
+
+//Query Builder
+
+$router->get('/builder','QueryBuilderController@AllRow');
+
+$router->get('/builder2','QueryBuilderController@SingleRow');
+
+$router->get('/builder3','QueryBuilderController@SingleRowFind');
+
+$router->get('/builder4','QueryBuilderController@PluckMethod');
