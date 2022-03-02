@@ -17,7 +17,11 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->String('name');
             $table->String('email');
+            $table->String('phone_no',50);
+            $table->String('city');
+            $table->text('description');
             $table->String('password');
+            
             $table->timestamps();
         });
     }
